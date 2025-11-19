@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GradeMate Post - Redirecting</title>
+    
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 50px; background-color: #1E1E1E; color: #FFFFFF; }
+        .container { max-width: 600px; margin: auto; background-color: #2D2D2D; padding: 30px; border-radius: 12px; }
+        h1 { color: #4285F4; }
+        a { color: #4285F4; text-decoration: none; font-weight: bold; }
+    </style>
+    <script>
+        // --- Redirection Logic for App Links Fallback ---
+        
+        // 1. Your mobile app's package name
+        var androidPackageName = "com.grademate.grademate"; 
+        
+        // 2. Function to redirect to the correct store
+        function redirectToStore() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/android/i.test(userAgent)) {
+                // Android: Redirect to the Play Store
+                window.location.replace("https://play.google.com/store/apps/details?id=" + androidPackageName);
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                // iOS: Redirect to the App Store (Replace with your actual ID)
+                window.location.replace("https://apps.apple.com/app/idYOUR_IOS_APP_STORE_ID");
+            } else {
+                // Desktop: Show message
+                document.getElementById('action-text').innerText = "Please view this post on your mobile device.";
+            }
+        }
+        
+        // App Link attempt: The browser will try to launch the app immediately using the App Link Intent.
+        // If it fails (app not installed/verification failed), the JavaScript timer runs and redirects to the Play Store.
+        setTimeout(redirectToStore, 1000); 
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Opening GradeMate Post...</h1>
+        <p>If the app doesn't open automatically, it means your device is loading the post. We are now redirecting you to the app store if you don't have the app installed.</p>
+        <p>
+            <a id="action-text" href="javascript:void(0)">Loading Store Link...</a>
+        </p>
+    </div>
+</body>
+</html>

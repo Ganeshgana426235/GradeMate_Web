@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "grademate-app",
+    "grademate": "grademate-app"
+  },
+  "targets": {},
+  "etags": {}
+}
