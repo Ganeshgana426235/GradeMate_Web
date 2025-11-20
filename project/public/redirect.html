@@ -23,7 +23,7 @@
 
             if (/android/i.test(userAgent)) {
                 // Android: Redirect to the Play Store
-                window.location.replace("https://play.google.com/store/apps/details?id=" + androidPackageName);
+                window.location.replace("https://play.google.com/store/apps/details?id=com.grademate.grademate" + androidPackageName);
             } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                 // iOS: Redirect to the App Store (Replace with your actual ID)
                 window.location.replace("https://apps.apple.com/app/idYOUR_IOS_APP_STORE_ID");

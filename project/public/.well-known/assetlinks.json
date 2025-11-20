@@ -1,13 +1,17 @@
 [
-      {
-        "relation": ["delegate_permission/common.handle_all_urls"],
-        "target": {
-          "namespace": "android_app",
-          "package_name": "com.grademate.grademate", 
-          "sha256_cert_fingerprints": [
-            "f1:8a:00:39:6b:13:9a:18:cf:7d:63:de:db:6b:78:34:0a:6a:55:e6:70:08:20:42:d7:13:0e:c8:70:6c:d5:75", 
-            "4e:d0:a5:2a:26:ad:12:e8:d5:c5:22:01:f5:cd:c0:2a:55:86:a4:8b:b9:a0:b1:19:2d:b6:10:e4:5f:e4:8d:24" 
-          ]
-        }
-      }
-    ]
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.grademate.grademate",
+      "sha256_cert_fingerprints": [
+        "f1:8a:00:39:6b:13:9a:18:cf:7d:63:de:db:6b:78:34:0a:6a:55:e6:70:08:20:42:d7:13:0e:c8:70:6c:d5:75",
+        "4e:d0:a5:2a:26:ad:12:e8:d5:c5:22:01:f5:cd:c0:2a:55:86:a4:8b:b9:a0:b1:19:2d:b6:10:e4:5f:e4:8d:24",
+        "60:D1:EE:29:BF:5B:FC:58:CA:04:7A:EE:CE:2E:D2:E2:EB:45:18:92:D0:2A:7A:3E:B4:1B:4F:B4:C1:32:31:BE"
+      ]
+    }
+  }
+]
